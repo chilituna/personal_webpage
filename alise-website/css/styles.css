@@ -1,0 +1,245 @@
+/*
+COLOR PALETTE
+
+Abbey           #4a4c52
+Akaroa          #d6c3aa
+Gray Chateau    #acb0b1
+Bali Hai        #90a1b4
+Floral White    #fffaf0
+*/
+
+/* GLOBAL STYLES 
+------------------------------------*/
+
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* set default to 10px using 62.5 method */
+  }
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+html, body{
+    height: 100%;
+}
+
+body {
+    background: #fffaf0;
+    margin: 0px;
+    font-family: "Open Sans", serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+h2, h3 {
+    font-family: "Lacquer", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Allison", serif;
+    font-weight: 400;
+    font-size: 7rem;
+    text-align: center;
+    margin: 0;
+    line-height: 0.9;
+}
+
+h2 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+
+/* links */
+a {
+    color: #90a1b4;
+}
+a:hover {
+    color: #acb0b1;
+    text-decoration: none;
+}
+footer a {
+    color: #d6c3aa;
+}
+footer a:hover {
+    color: #fffaf0;
+}
+.btn {
+    background: #4a4c52;
+    color: #d6c3aa;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: 5px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 30px;
+}
+
+
+/* HOME
+------------------------------------*/
+.home {
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.home .content-wrapper {
+    flex: 1 0 auto;
+}
+.content-bg {
+    background: rgb(255 255 255 / 0.9);
+    padding: 30px;
+}
+
+
+/* RESUME
+------------------------------------*/
+
+.resume header::before {
+    background: url(../images/bg.jpg) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 375px;
+}
+
+.resume-section {
+    margin-bottom: 100px;
+}
+
+.resume-section h2 {
+    border-bottom: 2px solid #90a1b4;
+}
+
+.download-link {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width:1200px) {
+    .download-link {
+        position: absolute;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    .resume header::before {
+        height: 200px;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Music and Sound
+------------------------------------*/
+
+.video-item {
+    margin: 30px 0;
+}
+
+.video-item iframe {
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width:860px) {
+    .video-item {
+        display: flow-root;
+    }
+    .video-item iframe {
+        float: left;
+        margin-right: 20px;
+    }
+}
+
+/* Exhibitions
+------------------------------------*/
+
+.exhibition-item {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    column-gap: 20px;
+}
+
+.exhibition-item img {
+    width: 400px;
+    float: left;
+    margin: 0;
+    margin-bottom: 10px;
+    border: 2px solid #acb0b1;
+}
+
+.exhibition-item img:first-child {
+    margin-top: 20px;
+}
+
+.exhibition-item img:last-child {
+    margin-bottom: 50px;
+}
+
+
+/* FOOTER
+------------------------------------*/
+footer {
+    background: #4a4c52;
+    color: #fffaf0;
+}
+
+.socials{
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.socials img{
+    width: 32px;
+}
+
+.socials img:hover{
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 600px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
